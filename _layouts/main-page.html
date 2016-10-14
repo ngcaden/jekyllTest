@@ -1,0 +1,90 @@
+<!-- Declare document type -->
+<!DOCTYPE html>
+
+<!-- Start of html -->
+<!-- Denote language -->
+<html lang="en">
+
+  {% include header.html %}
+  
+  <body style="background-color:rgb(85,180,193)/* rgb(74,178,226)*/;font-family: 'Josefin Sans', sans-serif;">
+
+    <!-- Title of webpage -->
+
+    <!-- Blank vertical space -->
+    <div class="container-fluid" style="height:5vh;"></div>
+
+    <div class="container-fluid">
+      <!-- Site Logo -->      
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+          <img src="/images/logo-vectorise.svg" style="background-color:white;max-width:304px;width: 100%; height:auto;" class="center-block img-responsive static-shadow"/>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+    </div>
+
+    <!-- Blank vertical space -->
+    <div class="container-fluid" style="height:5vh;"></div>
+
+
+    <div class="container-fluid card" style="height: 57px"></div>
+
+    <!-- navigation menu -->
+    <div class="container-fluid hidden-xs hidden-sm" style="position: relative; top: -57px;">
+      <div class="row">
+        <div class="col-md-1"></div>
+        
+        <div class="col-md-2">
+          <a href="#">
+            <button class="card-button">
+              <h3 class="menu">Explore</h3 class="menu">
+            </button>
+          </a>
+        </div>
+
+        <div class="col-md-2">
+          <a href="{% post_url 2016-10-14-about-me.markdown %}">
+            <button class="card-button">
+              <h3 class="menu">About Me</h3 class="menu">
+            </button>
+          </a>
+        </div>
+
+        <div class="col-md-2">
+          <a href="#"><button class="card-button"><h3 class="menu">Projects</h3 class="menu"></button></a>
+        </div>
+          
+        <div class="col-md-2">
+          <a href="#"><button class="card-button"><h3 class="menu">Blog</h3 class="menu"></button></a>
+        </div>
+          
+        <div class="col-md-2">
+          <a href="#"><button class="card-button"><h3 class="menu">Search</h3 class="menu"></button></a>
+        </div>
+
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+
+    <!-- navigation menu -->
+    <div class="container-fluid visible-sm visible-xs" style="position: relative; top: -57px; padding-right: 10%; padding-left: 10%">
+      <div class="drop">
+        <button onclick="myFunction()" class="dropbtn"><h3 class="menu">Menu <span class="caret"></span></h3 class="menu"></button>
+        <div id="myDropdown" class="drop-content">
+          <h3 class="menu">
+            <a href="{% post_url 2016-10-14-about-me.markdown %}" class="navbar-link">About Me</a>
+            <a href="#">Blog</a>
+            <a href="/pages/Test.html">Explore</a>
+            <a href="#">Search</a>
+          </h3 class="menu">
+        </div>
+      </div>
+    </div>
+
+    {{content}}
+
+    {% include footer.html %}
+  </body>
+</html>  
