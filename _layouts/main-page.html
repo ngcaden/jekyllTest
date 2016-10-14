@@ -47,13 +47,13 @@
         <div class="col-md-2">
           <a href="{% post_url 2016-10-14-about-me.markdown %}">
             <button class="card-button">
-              <h3 class="menu">About Me</h3 class="menu">
+              <h3 class="/about/about.html">About Me</h3 class="menu">
             </button>
           </a>
         </div>
 
         <div class="col-md-2">
-          <a href="#"><button class="card-button"><h3 class="menu">Projects</h3 class="menu"></button></a>
+          <a href="/index.html"><button class="card-button"><h3 class="menu">Projects</h3 class="menu"></button></a>
         </div>
           
         <div class="col-md-2">
@@ -74,7 +74,8 @@
         <button onclick="myFunction()" class="dropbtn"><h3 class="menu">Menu <span class="caret"></span></h3 class="menu"></button>
         <div id="myDropdown" class="drop-content">
           <h3 class="menu">
-            <a href="{% post_url 2016-10-14-about-me.markdown %}" class="navbar-link">About Me</a>
+            <a href="/index.html" class="navbar-link">Home</a>
+            <a href="/about/about.html" class="navbar-link">About Me</a>
             <a href="#">Blog</a>
             <a href="/pages/Test.html">Explore</a>
             <a href="#">Search</a>
