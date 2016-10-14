@@ -10,7 +10,7 @@ category: Miscellaneous
 	    <div class="col-md-4 col-sm-3 col-xs-2"></div>
 	    
 	    <div class="col-md-4 col-sm-6 col-xs-8">
-	      	<div class="circle-avatar static-shadow" style="background-image:url(/images/selfie.jpg); height: 57px; "></div>
+	      	<div class="circle-avatar static-shadow" style="background-image:url(/images/selfie.png); height: 57px; "></div>
 	    	</div>
 	    <div class="col-md-4 col-sm-3 col-xs-2"></div>
 	</div>
