@@ -1,6 +1,6 @@
 ---
-layout: post
-title how to run raspberry pi virtual machine on raspberru pi
+title: Draft2
+date: 2016-11-29 23:45:59.924000000 +00:00
 ---
 
 Virtual machines allow users to run another operating system on current operating system. This has multiple benefits: Compared to bootcamp, users do not need to reboot everytime they want to access another operating system. This allows power users to multitask and trying out systems concurrently. When trying out new operating system, users can start familiarise with the controls and command. 
