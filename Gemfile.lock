@@ -140,7 +140,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
 
 RUBY VERSION
-   ruby 2.1.5p273
+   ruby 2.0.0p648
 
 BUNDLED WITH
    1.13.5
