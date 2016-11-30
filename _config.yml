@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 email: quangnguyen30795@gmail.com
-description: 'This is my first attempt at creating a blog with Jekyll'
+description: This is my first attempt at creating a blog with Jekyll
 baseurl: ''
 url: ''
 twitter_username: jekyllrb
