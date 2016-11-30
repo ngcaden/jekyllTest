@@ -1,6 +1,7 @@
 ---
-layout: post
 title: How to install Matplotlib on Raspberry PI
+date: 2016-11-29 23:45:59.892000000 +00:00
+layout: post
 ---
 
 <!-- Picture -->
