@@ -19,7 +19,9 @@
       <div class="row">
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
+        <a href="/index.html">
           <img src="/images/logo-vectorise.svg" style="background-color:white;max-width:304px;width: 100%; height:auto;" class="center-block img-responsive static-shadow"/>
+        </a>
         </div>
         <div class="col-xs-1"></div>
       </div>
@@ -74,17 +76,29 @@
         <button onclick="myFunction()" class="dropbtn"><h3 class="menu">Menu <span class="caret"></span></h3 class="menu"></button>
         <div id="myDropdown" class="drop-content">
           <h3 class="menu">
-            <a href="/index.html" class="navbar-link">Home</a>
             <a href="/about/about.html" class="navbar-link">About Me</a>
-            <a href="#">Blog</a>
-            <a href="/pages/Test.html">Explore</a>
+            <a href="#">Dreams</a>
+            <a href="/index.html">Projects</a>
+            <a href="/archives/archives.html">Archives</a>
             <a href="#">Search</a>
           </h3 class="menu">
         </div>
       </div>
     </div>
 
-    {{content}}
+    <!-- Main writing space -->
+    <div class="container-fluid" style="position:relative; padding-left:10%;padding-right:10%;max-width: 950px;">
+    
+      <div class="container-fluid card text-center">
+            <h2>{{ page.title }}</h2>
+      </div>
+    
+      <!-- Blank empty space -->
+      <div class="container-fluid blank-vertical-space"></div>
+
+        {{content}}
+
+      </div>
 
     {% include footer.html %}
   </body>

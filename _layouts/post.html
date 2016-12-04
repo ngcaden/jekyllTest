@@ -1,82 +1,22 @@
-<!-- Declare document type -->
-<!DOCTYPE html>
+---
+layout: main-page
+---
 
-<!-- Start of html -->
-<!-- Denote language -->
-<html lang="en">
+<!-- Picture -->
 
-	{% include header.html %}
+<div class="container-fluid card text-center">
+        <h5>{{ page.date | date: "%b %-d, %Y" }} {{ page.author }}</h5>
+</div>
 
-    <!-- Background colour -->
-    <body style="background-color:RGB(85,180,193); font-family: 'Josefin Sans', sans-serif;">
+<!-- <div class="container-fluid">
+    <img src="/images/web-logo.svg" style="width:100%; height:auto;padding-bottom: 20px;">
+</div> -->
 
-      <!-- Top bar -->
-      <div class="container-fluid">
-          <div class="row card" style="height:65px;""></div>
-      </div>
+<!-- Blank empty space -->
+<div class="container-fluid blank-vertical-space"></div>
 
-      <div class="container-fluid" style="position: relative; top: -57px; padding-left:7%; padding-right: 7%;">
-        <div class="row vertical-align">
-            <div class="col-md-2 col-sm-3 col-xs-2">
-              <img src="/images/logo-vectorise.svg" style="height:114px; width:auto;" class="card-button" style="background-color: white" />
-            </div>
+<!-- Main Content -->
+<div class="container-fluid card-text">
+  {{content}}
+</div>
 
-            <div class="col-md-10 col-sm-9 hidden-xs">
-              
-              <div class="col-sm-4">
-                <a href="/index.html"><button class="card-button"><h3 class="menu">Home</h3></button></a>
-              </div>
-
-              <div class="col-sm-4">
-                <a href="#"><button class="card-button"><h3 class="menu">Blog</h3></button></a>
-              </div>
-              
-
-              <div class="col-sm-4">
-                <a href="#"><button class="card-button"><h3 class="menu">Search</h3></button></a>
-              </div>
-
-              
-            </div>
-
-            <div class="col-xs-4 visible-xs"></div>
-
-            <div class="col-xs-6 visible-xs">
-              <div class="drop">
-                <button onclick="myFunction()" class="dropbtn"><h3 class="menu">Menu <span class="caret"></span></h3></button>
-                
-                <div id="myDropdown" class="drop-content">
-                  <h3>
-                    <a href="/index.html" class="navbar-link"><h3 class="menu">Home</h3></a>
-                    <a href="#"><h3 class="menu">Blog</h3></a>
-                    <a href="#"><h3 class="menu">Search</h3></a>
-                 </h3>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Main writing space -->
-      <div class="container-fluid" style="position:relative; padding-left:10%;padding-right:10%;">
-        <!-- Title -->
-        <div class="container-fluid card text-center">
-                <h1>{{ page.title }}</h1>
-                <h3>{{ page.date }}</h3>
-        </div>
-
-    	<!-- Blank empty space -->
-        <div class="container-fluid blank-vertical-space"></div>
-
-        {{content}}
-
-        <!-- Blank empty space -->
-      	<div class="container-fluid large-blank-vertical-space"></div>
-
-      </div>
-
-      {% include footer.html %}
-    </body>
-</html>

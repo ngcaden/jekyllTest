@@ -1,20 +1,17 @@
 ---
-title: About Me
 layout: archives
 ---
 
 {% for post in site.posts limit:2 %}
 
-
 <a href='{{ post.url | prepend: site.baseurl }}'>  
     <div class="container-fluid card-text">
-        <img src="{{ post.banner | prepend: site.baseurl }}" style="width:100%; height:auto;">
         <div class="row">
             <div class="col-md-5 text-center">
                 <h3 class="heading">{{ post.title }}<br><small>Posted {{ post.date | date: "%b %-d, %Y" }}</small></h3>
             </div>
             
-            <div class="col-md-7" style="padding-top: 23px;">
+            <div class="col-md-7" style="padding-top: 0px;">
                 <p>{{ post.excerpt }}</p>
                 <footer>
                     <ul class="actions">
@@ -25,4 +22,5 @@ layout: archives
         </div>
     </div>
 </a> 
+
 {% endfor %}
