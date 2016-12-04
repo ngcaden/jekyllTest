@@ -3,7 +3,6 @@ title: About Me
 layout: about-me
 ---
 
-
 Hi, I am Quang Nguyen. I was born and raised in Hanoi, Vietnam but has become an international citizen since 2008.
 
 I am curious about all things. I love exploring and learning new things everyday. In the pursuit of knowledge, I enrolled myself in Imperial College London in 2014. I have been studying Physics there since.
