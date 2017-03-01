@@ -84,10 +84,18 @@ em {
 }
 
 .boat {
-	width: 250px;
-	top:-190px;
+	height: 250px;
+	top:-90px;
+	left:-100px;
 	position: relative;
-	transform: rotate(-5deg);
+	transform: rotate(-4deg);
+	animation: rocking 1s linear infinite;
+}
+
+@keyframes rocking {
+	50% {
+		transform: rotate(-1deg);
+	}
 }
 
 .moon {
