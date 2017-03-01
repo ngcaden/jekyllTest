@@ -1,0 +1,20 @@
+---
+title: Caden's Jekyll Test Site
+timezone: Europe/London
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: quangnguyen30795@gmail.com
+description: This is my first attempt at creating a blog with Jekyll
+baseurl: ''
+url: ''
+twitter_username: jekyllrb
+github_username: ngcaden
+markdown: kramdown
+theme: minima
+gems:
+- jekyll-feed
