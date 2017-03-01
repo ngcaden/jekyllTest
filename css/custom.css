@@ -11,34 +11,22 @@ body {
 	margin:auto;
 }
 
-.sun {
-	background: orange;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	position: relative;
-	top:15%;
-	left:30%;
-	margin: auto;
-	animation: radiance 3s infinite linear;
-}
-
-.sky {
+.frame {
 	width: 500px;
 	height: 300px;
 	position: relative;
 	margin: auto;
 	overflow: hidden;
-	background: linear-gradient(rgb(43,58,80),rgb(53,75,109));
 }
 
 .wave {
 	height: 60px;
-	top:-310px;
-	left:-130px;
+	top:-125px;
+	left:-300px;
 	position: relative;
 	animation: water 1s linear infinite;
 	z-index: 4;
+	pointer-events: none;
 }
 
 @keyframes water {
@@ -56,39 +44,39 @@ body {
 	}
 }
 
-.moon {
-	position: relative;
-	top: 50px;
-	left: 70px;
-	z-index: 10;
-	width: 50px;
-	height: 50px;
-}
+
 
 .boatbox {
-	height: 100px;
-	width:300px;
+	height: 200px;
+	width:200px;
 	position:relative;
-	left:130px;
-	top:140px;
+	left:300px;
+	top:-345px;
+	z-index: 5;
+
 }
 
 .boat {
 	height: 250px;
-	top:-160px;
-	left:-250px;
+	top:20px;
+	left:-400px;
 	position: relative;
 	transform: rotate(-4deg);
 	animation: rocking 1s linear infinite;
-	z-index: 3;
+	z-index: 5;
+	pointer-events: none;
+	transition: transform 1s ease-out;
 }
 
-.boatbox:hover .boat{
-	animation: speedboat 5s ease-out;
-} 
+.boatbox:hover .boat {
+	transform: rotate(-6deg) translate(30px,10px);
+	animation:none;
+}
+
 
 .boatbox:hover .man{
-	animation: speedboat 5s ease-out;
+	transform: rotate(-6deg) translate(30px,10px);
+	animation:none;
 }
 
 .boatbox:hover .wave{
@@ -111,15 +99,24 @@ body {
 
 .man {
 	width: 100px;
-	top:-300px;
-	left:-100px;
+	top:-120px;
+	left:-200px;
 	position: relative;
 	transform: rotate(-4deg);
 	animation: rocking 1s linear infinite;
 	z-index: 2;
+	pointer-events: none;
+	transition: transform 1s ease-out;
 }
 
-
+.moon {
+	position: relative;
+	top: -250px;
+	left: 70px;
+	z-index: 10;
+	width: 50px;
+	height: 50px;
+}
 
 
 .moon-pos {
@@ -128,6 +125,7 @@ body {
 	height: 50px;
 	border-radius:50%;
 	background: #fffdd0;
+	z-index: 2;
 }
 
 .moon-neg {
@@ -137,5 +135,22 @@ body {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background: linear-gradient(rgb(44,59,82),rgb(45,62,87));
+	background: linear-gradient(rgb(45,61,84),rgb(46,63,89));
+	transition: transform 1s linear;
+	z-index: 3;
 }
+
+.sky {
+	width: 500px;
+	height: 300px;
+	position: relative;
+
+	z-index:  1;
+	background: linear-gradient(rgb(43,58,80),rgb(53,75,109));
+}
+
+.moon:hover .moon-neg{
+	transform: translateX(50px);
+}
+
+
