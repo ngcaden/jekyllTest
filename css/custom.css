@@ -11,33 +11,6 @@ body {
 	margin:auto;
 }
 
-h1 {
-	display: inline;
-}
-
-
-em {
-	margin-top: 1em;
-	color: rgb(74,73,80);
-	font-style: normal;
-}
-
-.trigger {
-	width:200px;
-	height:200px;
-	background-color: black;
-	border:20px solid #ddd;
-}
-
-.box {
-	display: inline-block;
-	width:200px;
-	height:200px;
-	background-color: pink;
-	transition: transform 300ms ease-in-out;
-	pointer-events: none;
-}
-
 .sun {
 	background: orange;
 	width: 50px;
@@ -50,30 +23,22 @@ em {
 	animation: radiance 3s infinite linear;
 }
 
-@keyframes radiance {
-    to   {
-    	transform: translateX(50px)
-    }
-}
-
-
 .sky {
 	width: 500px;
 	height: 300px;
 	position: relative;
 	margin: auto;
 	overflow: hidden;
-/*	background: linear-gradient(rgb(20,36,60),rgb(30,55,93));
-*/
-	background: linear-gradient(rgb(20,36,60),rgb(53,75,109));
+	background: linear-gradient(rgb(43,58,80),rgb(53,75,109));
 }
 
 .wave {
-	top:190px;
 	height: 60px;
-	left:0px;
+	top:-310px;
+	left:-130px;
 	position: relative;
 	animation: water 1s linear infinite;
+	z-index: 4;
 }
 
 @keyframes water {
@@ -83,7 +48,7 @@ em {
 	}
 	99.9% {
 		transform: translateX(0px);
-		opacity: 0;
+		opacity: 0.4;
 	}
 
 	100% {
@@ -91,15 +56,52 @@ em {
 	}
 }
 
+.moon {
+	position: relative;
+	top: 50px;
+	left: 70px;
+	z-index: 10;
+	width: 50px;
+	height: 50px;
+}
+
+.boatbox {
+	height: 100px;
+	width:300px;
+	position:relative;
+	left:130px;
+	top:140px;
+}
+
 .boat {
 	height: 250px;
-	top:-90px;
-	left:-100px;
+	top:-160px;
+	left:-250px;
 	position: relative;
 	transform: rotate(-4deg);
 	animation: rocking 1s linear infinite;
 	z-index: 3;
 }
+
+.boatbox:hover .boat{
+	animation: speedboat 5s ease-out;
+} 
+
+.boatbox:hover .man{
+	animation: speedboat 5s ease-out;
+}
+
+.boatbox:hover .wave{
+	animation: water 300ms linear infinite;
+}
+
+
+@keyframes speedboat {
+	10%, 90%{
+		transform: rotate(-6deg) translate(30px,10px);
+	}
+}
+
 
 @keyframes rocking {
 	50% {
@@ -109,21 +111,16 @@ em {
 
 .man {
 	width: 100px;
-	top:-230px;
-	left:-50px;
+	top:-300px;
+	left:-100px;
 	position: relative;
 	transform: rotate(-4deg);
 	animation: rocking 1s linear infinite;
 	z-index: 2;
 }
 
-.moon {
-  position: relative;
-  top: 50px;
-  left: 300px;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-}
+
+
 
 .moon-pos {
 	position: relative;
@@ -140,30 +137,5 @@ em {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background: linear-gradient(rgb(23,39,64),rgb(27,44,71));
+	background: linear-gradient(rgb(44,59,82),rgb(45,62,87));
 }
-
-
-.fan {
-	display: inline-block;
-	width:100px;
-	height:100px;
-	position:relative;
-	margin:auto;
-	animation-name: myframes; 
-	animation-duration: 3s; 
-	animation-iteration-count:infinite;
-	animation-timing-function: linear;
-	animation-direction: reverse;
-}
-
-@keyframes myframes {
-	0% {
-		transform: rotate(360deg);
-}
-
-.trigger.clicked .box{
-	transform: translate(200px,150px) rotate(20deg);
-}
-
-
