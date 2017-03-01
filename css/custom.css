@@ -1,0 +1,169 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	margin:auto;
+}
+
+h1 {
+	display: inline;
+}
+
+
+em {
+	margin-top: 1em;
+	color: rgb(74,73,80);
+	font-style: normal;
+}
+
+.trigger {
+	width:200px;
+	height:200px;
+	background-color: black;
+	border:20px solid #ddd;
+}
+
+.box {
+	display: inline-block;
+	width:200px;
+	height:200px;
+	background-color: pink;
+	transition: transform 300ms ease-in-out;
+	pointer-events: none;
+}
+
+.sun {
+	background: orange;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: relative;
+	top:15%;
+	left:30%;
+	margin: auto;
+	animation: radiance 3s infinite linear;
+}
+
+@keyframes radiance {
+    to   {
+    	transform: translateX(50px)
+    }
+}
+
+
+.sky {
+	width: 500px;
+	height: 300px;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+/*	background: linear-gradient(rgb(20,36,60),rgb(30,55,93));
+*/
+	background: linear-gradient(rgb(20,36,60),rgb(53,75,109));
+}
+
+.wave {
+	top:190px;
+	height: 60px;
+	left:0px;
+	position: relative;
+	animation: water 1s linear infinite;
+}
+
+@keyframes water {
+	99.8% { 
+		transform: translateX(-71px);
+		opacity: 1;
+	}
+	99.9% {
+		transform: translateX(0px);
+		opacity: 0;
+	}
+
+	100% {
+		opacity:1;
+	}
+}
+
+.boat {
+	height: 250px;
+	top:-90px;
+	left:-100px;
+	position: relative;
+	transform: rotate(-4deg);
+	animation: rocking 1s linear infinite;
+	z-index: 3;
+}
+
+@keyframes rocking {
+	50% {
+		transform: rotate(-1deg);
+	}
+}
+
+.man {
+	width: 100px;
+	top:-230px;
+	left:-50px;
+	position: relative;
+	transform: rotate(-4deg);
+	animation: rocking 1s linear infinite;
+	z-index: 2;
+}
+
+.moon {
+  position: relative;
+  top: 50px;
+  left: 300px;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.moon-pos {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius:50%;
+	background: #fffdd0;
+}
+
+.moon-neg {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: linear-gradient(rgb(23,39,64),rgb(27,44,71));
+}
+
+
+.fan {
+	display: inline-block;
+	width:100px;
+	height:100px;
+	position:relative;
+	margin:auto;
+	animation-name: myframes; 
+	animation-duration: 3s; 
+	animation-iteration-count:infinite;
+	animation-timing-function: linear;
+	animation-direction: reverse;
+}
+
+@keyframes myframes {
+	0% {
+		transform: rotate(360deg);
+}
+
+.trigger.clicked .box{
+	transform: translate(200px,150px) rotate(20deg);
+}
+
+
