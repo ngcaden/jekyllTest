@@ -5,17 +5,54 @@ body {
 	-o-font-smoothing: antialiased;
 	padding: 0;
 	margin: 0;
+	 -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+.main-container {
+	max-width:500px;
+	padding-left: 50px; 
+	padding-right: 50px;
+	padding-top: 25px;
+	padding-bottom:25px;
+	margin:auto;
 }
 
 .container {
 	margin:auto;
 }
 
-.frame {
-	width: 500px;
-	height: 300px;
-	position: relative;
+.icon {
+	display: inline-block;
+	vertical-align: text-top;
+	fill: currentColor;
+	width: 20px;
+	padding: 10px;
+}
+
+.photo{
+	display: block;
+	vertical-align: text-top;
+	fill: currentColor;
+	width: 100px;
+	border-radius: 10%;
 	margin: auto;
+	margin-bottom: 20px;
+}
+
+a { 
+    text-decoration: none;
+    outline: none;
+}
+
+.frame {
+	max-width: 500px;
+	max-height: 300px;
+	position: relative;
 	overflow: hidden;
 }
 
@@ -44,8 +81,6 @@ body {
 	}
 }
 
-
-
 .boatbox {
 	height: 200px;
 	width:200px;
@@ -68,6 +103,12 @@ body {
 	transition: transform 1s ease-out;
 }
 
+@keyframes speedboat {
+	10%, 90%{
+		transform: rotate(-6deg) translate(30px,10px);
+	}
+}
+
 .boatbox:hover .boat {
 	transform: rotate(-6deg) translate(30px,10px);
 	animation:none;
@@ -83,20 +124,6 @@ body {
 	animation: water 300ms linear infinite;
 }
 
-
-@keyframes speedboat {
-	10%, 90%{
-		transform: rotate(-6deg) translate(30px,10px);
-	}
-}
-
-
-@keyframes rocking {
-	50% {
-		transform: rotate(-1deg);
-	}
-}
-
 .man {
 	width: 100px;
 	top:-120px;
@@ -107,6 +134,12 @@ body {
 	z-index: 2;
 	pointer-events: none;
 	transition: transform 1s ease-out;
+}
+
+@keyframes rocking {
+	50% {
+		transform: rotate(-1deg);
+	}
 }
 
 .moon {
@@ -149,8 +182,10 @@ body {
 	background: linear-gradient(rgb(43,58,80),rgb(53,75,109));
 }
 
-.moon:hover .moon-neg{
+.moon:active .moon-neg{
 	transform: translateX(50px);
 }
 
-
+.moon:hover .moon-neg{
+	transform: translateX(50px);
+}
