@@ -1,2 +1,2 @@
-# jekyllTest
-Test Jekyll Site
+# Personal Website
+This is my personal website :)
