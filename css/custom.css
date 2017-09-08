@@ -1,191 +1,57 @@
 body {
-	font-family: 'Nunito', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-	padding: 0;
-	margin: 0;
-	 -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none; 
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
+     font-family: 'Raleway', sans-serif;
+     background-color: rgb(233,235,238);
 }
 
-.main-container {
-	max-width:500px;
-	padding-left: 50px; 
-	padding-right: 50px;
-	padding-top: 25px;
-	padding-bottom:25px;
-	margin:auto;
+.card {
+    background: #fff;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 700px;
 }
 
-.container {
-	margin:auto;
+.banner {
+    background: #fff;
+    padding-left: 16%;
+    padding-right: 16%;
+    margin: 0 auto;
 }
 
-.icon {
-	display: inline-block;
-	vertical-align: text-top;
-	fill: currentColor;
-	width: 20px;
-	padding: 10px;
+.horizontal-spacing {
+    height:55px;
 }
 
-.photo{
-	display: block;
-	vertical-align: text-top;
-	fill: currentColor;
-	width: 100px;
-	border-radius: 10%;
-	margin: auto;
-	margin-bottom: 20px;
+#footer {
+    clear:both;
+    padding:20px;
+    text-align: center;
+    /* padding-bottom:20px; */
 }
 
-a { 
-    text-decoration: none;
-    outline: none;
+.navigation {
+    max-width:700px;
+    padding-top:20px;
+    font-size:15px;
 }
 
-.frame {
-	max-width: 500px;
-	max-height: 300px;
-	position: relative;
-	overflow: hidden;
+@media (min-width: 992px) {
+    .navigation {
+        padding-top: 70px;
+    }
 }
 
-.wave {
-	height: 60px;
-	top:-125px;
-	left:-300px;
-	position: relative;
-	animation: water 1s linear infinite;
-	z-index: 4;
-	pointer-events: none;
+.committee-image {
+    display: block;
+    width: 76%;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 5px;
 }
 
-@keyframes water {
-	99.8% { 
-		transform: translateX(-71px);
-		opacity: 1;
-	}
-	99.9% {
-		transform: translateX(0px);
-		opacity: 0.4;
-	}
-
-	100% {
-		opacity:1;
-	}
+strong, a span {
+    color: black;
 }
-
-.boatbox {
-	height: 200px;
-	width:200px;
-	position:relative;
-	left:300px;
-	top:-345px;
-	z-index: 5;
-
-}
-
-.boat {
-	height: 250px;
-	top:20px;
-	left:-400px;
-	position: relative;
-	transform: rotate(-4deg);
-	animation: rocking 1s linear infinite;
-	z-index: 5;
-	pointer-events: none;
-	transition: transform 1s ease-out;
-}
-
-@keyframes speedboat {
-	10%, 90%{
-		transform: rotate(-6deg) translate(30px,10px);
-	}
-}
-
-.boatbox:hover .boat {
-	transform: rotate(-6deg) translate(30px,10px);
-	animation:none;
-}
-
-
-.boatbox:hover .man{
-	transform: rotate(-6deg) translate(30px,10px);
-	animation:none;
-}
-
-.boatbox:hover .wave{
-	animation: water 300ms linear infinite;
-}
-
-.man {
-	width: 100px;
-	top:-120px;
-	left:-200px;
-	position: relative;
-	transform: rotate(-4deg);
-	animation: rocking 1s linear infinite;
-	z-index: 2;
-	pointer-events: none;
-	transition: transform 1s ease-out;
-}
-
-@keyframes rocking {
-	50% {
-		transform: rotate(-1deg);
-	}
-}
-
-.moon {
-	position: relative;
-	top: -250px;
-	left: 70px;
-	z-index: 10;
-	width: 50px;
-	height: 50px;
-}
-
-
-.moon-pos {
-	position: relative;
-	width: 50px;
-	height: 50px;
-	border-radius:50%;
-	background: #fffdd0;
-	z-index: 2;
-}
-
-.moon-neg {
-	position: absolute;
-	top: -5px;
-	right: -5px;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background: linear-gradient(rgb(45,61,84),rgb(46,63,89));
-	transition: transform 1s linear;
-	z-index: 3;
-}
-
-.sky {
-	width: 500px;
-	height: 300px;
-	position: relative;
-
-	z-index:  1;
-	background: linear-gradient(rgb(43,58,80),rgb(53,75,109));
-}
-
-.moon:active .moon-neg{
-	transform: translateX(50px);
-}
-
-.moon:hover .moon-neg{
-	transform: translateX(50px);
-}
+  

@@ -1,5 +1,5 @@
 ---
-title: Caden's Jekyll Test Site
+title: PhySoc Temp Site Test Site
 timezone: Europe/London
 collections:
   posts:
@@ -9,10 +9,10 @@ collections:
     title: Uploads
     output: true
 email: quangnguyen30795@gmail.com
-description: This is my first attempt at creating a blog with Jekyll
+description: Temporary static PhySoc Website using Jekyll
 baseurl: ''
 url: ''
-twitter_username: jekyllrb
+twitter_username: 
 github_username: ngcaden
 markdown: kramdown
 theme: minima

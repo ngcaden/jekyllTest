@@ -1,5 +1,8 @@
-<html>
-    </body>
+@extends('main')
+
+@section('title', '| Home')
+
+@section('content')
     
     <div class='row'>
         <div class='col-md-6'>
@@ -76,8 +79,7 @@
 @endsection <!-- content -->
 
 
-
+@section('javascript')
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="/js/app/controllers/eventController.js"></script>
-</body>
-</html>
+@endsection
