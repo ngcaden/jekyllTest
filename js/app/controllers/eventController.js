@@ -24,29 +24,13 @@ angular.module('eventApp', [])
     .controller('ListCtrl', ['$http', function($http) {
         var self = this;
 
-        self.events = [];
-        self.new_events = [];
-        
-        $http.get('/api/events').then(function(response) {
-            self.new_events = response.data;
-            self.events = self.new_events;
-        }, function(errResponse) {
-            console.error('Error while fetching notes');
-        });
-
-        self.allEvents = function() {
-            console.log('Fetching notes');
-            $http.get('/api/events_all').then(function(response) {
-                self.events = response.data;
-            }, function(errResponse) {
-                console.error('Error while fetching notes');
-            });
-        };
-
-        self.hideAllEvents = function() {
-            
-            self.events = self.new_events;
-        };
+        self.events = [
+            {id:'1', title: "Fresher's Fair 2017", date: '2017-10-03', start: '09:00', end: '15:00',
+                location: "Queen's Lawn",
+                body: "Opportunity to check out all clubs and societies at Imperial College.",
+                category: 'Social'
+            }
+        ];
 
         self.getEventClass = function(item) {
             if(item.category === 'Careers') {
