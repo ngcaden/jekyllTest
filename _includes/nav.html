@@ -2,7 +2,7 @@
     &nbsp
     <div class='row'>
         <div class='col-md-3 col-md-offset-1 text-center'>
-            <a href="/"><img src="{{ asset('images/logo_large-physoc.png') }}" style='max-width:250px;'></a>
+            <a href="/"><img src="{{ '/images/logo_large-physoc.png' }}" style='max-width:250px;'></a>
         </div>
 
         
@@ -13,17 +13,17 @@
                     
 
                     <div class='col-xs-3 col-md-3'>
-                        <a style="{{ Request::is('/') ? "font-weight:bold":"" }}"  href="/" style="white-space: nowrap;">What's On</a>
+                        <a href="{{ '/index.html' }}" style="white-space: nowrap;">What's On</a>
                     </div>
 
                     <div class='col-xs-3 col-md-2'>
-                        <a style="{{ Request::is('about') ? "font-weight:bold":"" }}"  href="/about">About</a>
+                        <a href="{{ '/pages/about.html' }}">About</a>
                     </div>
                     <div class='col-xs-3 col-md-3'>
-                        <a style="{{ Request::is('sponsorship') ? "font-weight:bold":"" }}"  href="/sponsorship">Sponsors</a>
+                        <a href="{{ '/pages/sponsorship.html' }}">Sponsors</a>
                     </div>
                     <div class='col-xs-3 col-md-2'>
-                        <a style="{{ Request::is('wikis') ? "font-weight:bold":"" }}"  href="/wikis">Wiki</a>
+                        <a  href="https://rcsu.org.uk/physoc/wiki">Wiki</a>
                     </div>  
 
                     <div class='col-xs-1 col-xs-offset-5 col-md-1 col-md-offset-0'>
@@ -36,7 +36,7 @@
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
                     </div>
-                </div> {{-- .row --}}
+                </div>
             </div>
         </div>
     </div>

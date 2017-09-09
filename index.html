@@ -1,12 +1,14 @@
-<html>
-    </body>
-    
+---
+layout: main
+title:  "PhySoc | Home"
+---
+
     <div class='row'>
         <div class='col-md-6'>
             <div class="card" id="welcome-column">   
                 
                 <div class="banner text-center">
-                    <img src="{{ asset('images/banner_bahfest.png') }}"  style='width:100%;'>
+                    <img src="{{ 'images/banner_bahfest.png' }}"  style='width:100%;'>
                 </div>
                 
                 &nbsp
@@ -73,11 +75,9 @@
             &nbsp 
         </div> <!-- .col-md-6 -->
     </div> <!-- .row -->
-@endsection <!-- content -->
+
 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<script src="/js/app/controllers/eventController.js"></script>
-</body>
-</html>
+<script src="{{ 'js/app/controllers/eventController.js' }}"></script>

@@ -15,6 +15,5 @@ url: ''
 twitter_username: 
 github_username: ngcaden
 markdown: kramdown
-theme: minima
 gems:
-- jekyll-feed
+- jekyll-angular
