@@ -5,8 +5,8 @@ layout: main
 
     <div class="card">
         
-        <div class='row'>
-            <div class='col-md-12'>
+        <div class='row' ng-app='sponsorship'>
+            <div class='col-md-12' ng-controller='MainCtrl as ctrl'>
                 <h1>Sponsorship</h1>
                 <hr>
                 <p>PhySoc offers a lot to our students but this wouldn't be possible without the support we receive from industry. In return, companies gain access to over 1000 active physics students through a variety of events, sessions, emails, job advertisements and more.</p>
@@ -22,18 +22,25 @@ layout: main
                 &nbsp
                 <h4>Current Sponsors</h4>
                 <hr>
-                <!-- @foreach($sponsors as $sponsor)
-                            
-                            <div>
-                                <h3>{{ $sponsor->name }}</h3>
-                                
-                                <img src="{{ asset('logos' . $sponsor->logo) }}" height = "40" width = "80">
-                                <p>{{ $sponsor->description  }}</p>
-                                <a class="btn btn-primary" href="{{ url($sponsor->url) }}" role="button">Find Out More</a>
+                <div class='well'>
+                    <div class="panel-group">
+                        <div ng-repeat="sponsor in ctrl.sponsors" class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong ng-bind='sponsor.name'></strong>
                             </div>
-
-                @endforeach -->
-
+                            
+                            <div class="panel-body">
+                                <div class='container-fluid'>
+                                        <img class='img-responsive' src= "{% raw %}{{ sponsor.logo }}{% endraw %}">
+                                </div>
+                                &nbsp
+                                
+                                <p ng-show='sponsor.description' ng-bind='sponsor.description'></p>
+                                <strong ng-show='sponsor.url'>Sponsor URL:</strong> <a href="{% raw %}{{sponsor.url}}{% endraw %}" ng-bind='sponsor.url'></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -45,7 +52,8 @@ layout: main
       .controller('MainCtrl', [function() {
           var self = this;
           self.sponsors = [
-              {name: 'President', url: 'Thomas Woolley', logo: '', description: "{{ '/images/committee/president.jpg' }}"},
+              {name: 'TradeTeq', url: 'www.tradeteq.com', logo: '{{ "/images/sponsors/tradeteq.png" }}', description: "TradeTeq is a technology platform for trade finance. We create transparency and liquidity by using advanced analytics, data visualisation, and machine learning. Our technology provides deeper insights into trade finance exposures for better portfolio selection and management. At TradeTeq we believe in working together as a team to develop great products that transform trade finance. Everyone at TradeTeq is driven by excellence and innovation and we are constantly challenging the status quo."},
+              {name: 'Pearl Diver Capital', url: 'www.pearldivercapital.com', logo: '{{ "/images/sponsors/pearldivercapital.jpg" }}', description: "Pearl Diver Capital is a boutique asset manager, regulated and authorized by the FCA. We are specialists in securitised products, offering institutional investors access to US and Global corporate credit, in a structured format, through investments in Collateralised Loan Obligation (CLO) tranches."},
               ];
       }]);
     </script>
