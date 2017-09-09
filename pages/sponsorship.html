@@ -1,8 +1,7 @@
-@extends('main')
-
-@section('title', '| Sponsors')
-
-@section('content')
+---
+layout: main
+title:  "PhySoc | Sponsors"
+---
     <div class="card">
         
         <div class='row'>
@@ -22,7 +21,7 @@
                 &nbsp
                 <h4>Current Sponsors</h4>
                 <hr>
-                @foreach($sponsors as $sponsor)
+                <!-- @foreach($sponsors as $sponsor)
                             
                             <div>
                                 <h3>{{ $sponsor->name }}</h3>
@@ -32,10 +31,9 @@
                                 <a class="btn btn-primary" href="{{ url($sponsor->url) }}" role="button">Find Out More</a>
                             </div>
 
-                @endforeach
+                @endforeach -->
 
 
             </div>
         </div>
     </div>
-@endsection
