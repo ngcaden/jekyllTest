@@ -50,7 +50,7 @@ layout: main
                 <div class='row'>
                     <div class='col-md-3 col-sm-4 col-xs-6 text-center' ng-repeat='member in ctrl.members'>
                         <img class='committee-image' ng-hide='member.picture' src="{{ '/images/logo_main-physoc.png' }}">
-                        <img class='committee-image' ng-show='member.picture' src= "{{ 'member.picture' | angular }}">
+                        <img class='committee-image' ng-show='member.picture' src= "{% raw %}{{ member.picture }}{% endraw %}">
                         <span ng-bind='member.name'></span>
                         <br>
                         <strong ng-bind='member.position'></strong>

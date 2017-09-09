@@ -37,3 +37,14 @@ title:  "PhySoc | Sponsors"
             </div>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+    angular.module('sponsorship',[])
+      .controller('MainCtrl', [function() {
+          var self = this;
+          self.sponsors = [
+              {name: 'President', url: 'Thomas Woolley', logo: '', description: "{{ '/images/committee/president.jpg' }}"},
+              ];
+      }]);
+    </script>
