@@ -49,13 +49,15 @@ layout: main
                 
                 <div class='row'>
                     <div class='col-md-3 col-sm-4 col-xs-6 text-center' ng-repeat='member in ctrl.members'>
-                        <img class='committee-image' ng-hide='member.picture' src="{{ '/images/logo_main-physoc.png' }}">
-                        <img class='committee-image' ng-show='member.picture' src= "{% raw %}{{ member.picture }}{% endraw %}">
-                        <span ng-bind='member.name'></span>
-                        <br>
-                        <strong ng-bind='member.position'></strong>
-                        <br/>
-                        &nbsp
+                        <div class='committee-card'>
+                            <img class='committee-image' ng-hide='member.picture' src="{{ '/images/logo_main-physoc.png' }}">
+                            <img class='committee-image' ng-show='member.picture' src= "{% raw %}{{ member.picture }}{% endraw %}">
+                            <span ng-bind='member.name'></span>
+                            <br>
+                            <strong ng-bind='member.position'></strong>
+                            <br/>
+                            &nbsp
+                        </div>
                     </div>
                 </div>     
             </div>
@@ -70,14 +72,15 @@ angular.module('committee',[])
       self.members = [
           {position: 'President', name: 'Thomas Woolley', picture: "{{ '/images/committee/president.jpg' }}"},
           {position: 'Vice President', name: 'Hunain Nadeem', picture: "{{ '/images/committee/vice-president.jpg' }}"},
+          {position: 'Secretary', name: 'Timothy Marley', picture: "{{ '/images/committee/secretary.jpg' }}"},
+          {position: 'Social Secretary', name: 'Joseff Davies', picture: "{{ '/images/committee/social-secretary.jpg' }}"},
+          {position: 'Treasurer', name: 'Shahbaz Khan', picture: "{{ '/images/committee/treasurer.jpg' }}"},
           {position: 'Events Officer', name: 'William Richards', picture: "{{ '/images/committee/events-officer.jpg' }}"},
           {position: 'Webmaster', name: 'Quang Nguyen', picture: "{{ '/images/committee/webmaster.jpg' }}"},
-          {position: 'Publicity Officer', name: 'Timothy Marley', picture: "{{ '/images/committee/publicity-officer.jpg' }}"},
-          {position: 'Social Secretary', name: 'Joseff Davies', picture: "{{ '/images/committee/social-secretary.jpg' }}"},
-          {position: 'Department Representative', name: 'Michaela Flegrova', picture: '{{ "/images/committee/dep-rep.jpg" }}'},
-          {position: 'PG Department Representative', name: 'Lloyd James', picture: "{{ '/images/committee/pg-dep-rep.jpg' }}"},
-          {position: 'Careers and Sponsorship Officer', name: 'Nicholas Lee', picture: "{{ '/images/committee/sponsorship-officer.jpg' }}"},
           {position: 'Education and Lecturers Officer', name: 'Jemima Graham', picture: "{{ '/images/committee/education-officer.jpg' }}"},
+          {position: 'Careers and Sponsorship Officer', name: 'Nicholas Lee', picture: "{{ '/images/committee/sponsorship-officer.jpg' }}"},   
+          {position: 'Department Representative', name: 'Michaela Flegrova', picture: '{{ "/images/committee/dep-rep.jpg" }}'},
+          {position: 'PG Department Representative', name: 'Lloyd James', picture: "{{ '/images/committee/pg-dep-rep.jpg' }}"},   
       ];
   }]);
 </script>
