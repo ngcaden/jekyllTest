@@ -35,7 +35,7 @@ layout: main
                                 </div>
                                 &nbsp
                                 
-                                <p ng-show='sponsor.description' ng-bind='sponsor.description'></p>
+                                <p ng-show='sponsor.description' ng-bind-html='sponsor.description'></p>
                                 <strong ng-show='sponsor.url'>Sponsor URL:</strong> <a href="{% raw %}{{sponsor.url}}{% endraw %}" ng-bind='sponsor.url'></a></p>
                             </div>
                         </div>
@@ -47,13 +47,15 @@ layout: main
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
     <script>
-    angular.module('sponsorship',[])
+    angular.module('sponsorship',['ngSanitize'])
       .controller('MainCtrl', [function() {
           var self = this;
           self.sponsors = [
               {name: 'TradeTeq', url: 'https://www.tradeteq.com', logo: '{{ "/images/sponsors/tradeteq.png" }}', description: "TradeTeq is a technology platform for trade finance. We create transparency and liquidity by using advanced analytics, data visualisation, and machine learning. Our technology provides deeper insights into trade finance exposures for better portfolio selection and management. At TradeTeq we believe in working together as a team to develop great products that transform trade finance. Everyone at TradeTeq is driven by excellence and innovation and we are constantly challenging the status quo."},
               {name: 'Pearl Diver Capital', url: 'https://www.pearldivercapital.com', logo: '{{ "/images/sponsors/pearldivercapital.jpg" }}', description: "Pearl Diver Capital is a boutique asset manager, regulated and authorized by the FCA. We are specialists in securitised products, offering institutional investors access to US and Global corporate credit, in a structured format, through investments in Collateralised Loan Obligation (CLO) tranches."},
+              {name: 'ECM', url:'https://ecmselection.co.uk', logo: '{{ "/images/sponsors/ecm.png" }}', description:'<p>ECM has over 30 years of experience placing bright, numerate candidates with the UK’s most innovative technology companies. We recruit the best for the best – top companies in the high-tech sector.<br> Our consultants are techies, and we use our knowledge and connections to assist in your job search.<br> So leverage our client relationships for ideas, let us help you prepare for interviews, and get the job you want. What’s the catch? There’s no hidden costs – our service is free, so work with us so we can best help you.<br> <a href="https://www.ecmselection.co.uk/graduate-phd-jobs">https://www.ecmselection.co.uk/graduate-phd-jobs</a><br> <a href="https://www.ecmselection.co.uk/software-jobs">https://www.ecmselection.co.uk/software-jobs</a><br> <a href="https://www.ecmselection.co.uk/electronics-jobs">https://www.ecmselection.co.uk/electronics-jobs</a><br> Differentiate yourself and start your career with a progressive company rather than joining a grad scheme. Send in your CV and get in touch! <a href="mailto:CV@ecmselection.co.uk">CV@ecmselection.co.uk</a></p>'}
               ];
       }]);
     </script>
